@@ -15,7 +15,7 @@ namespace Baitap_Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBai5());
+            Application.Run(new frmMain());
         }
     }
 }

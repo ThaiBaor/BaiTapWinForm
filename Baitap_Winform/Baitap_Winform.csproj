@@ -61,23 +61,35 @@
     <Compile Include="Bai3.Designer.cs">
       <DependentUpon>Bai3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bai4cs.cs">
+    <Compile Include="Bai4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bai4cs.Designer.cs">
-      <DependentUpon>Bai4cs.cs</DependentUpon>
+    <Compile Include="Bai4.Designer.cs">
+      <DependentUpon>Bai4.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBai5.cs">
+    <Compile Include="Bai5.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBai5.Designer.cs">
-      <DependentUpon>frmBai5.cs</DependentUpon>
+    <Compile Include="Bai5.Designer.cs">
+      <DependentUpon>Bai5.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMaincs.cs">
+    <Compile Include="Bai6.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMaincs.Designer.cs">
-      <DependentUpon>frmMaincs.cs</DependentUpon>
+    <Compile Include="Bai6.Designer.cs">
+      <DependentUpon>Bai6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bai7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai7.Designer.cs">
+      <DependentUpon>Bai7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,14 +102,20 @@
     <EmbeddedResource Include="Bai3.resx">
       <DependentUpon>Bai3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bai4cs.resx">
-      <DependentUpon>Bai4cs.cs</DependentUpon>
+    <EmbeddedResource Include="Bai4.resx">
+      <DependentUpon>Bai4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBai5.resx">
-      <DependentUpon>frmBai5.cs</DependentUpon>
+    <EmbeddedResource Include="Bai5.resx">
+      <DependentUpon>Bai5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMaincs.resx">
-      <DependentUpon>frmMaincs.cs</DependentUpon>
+    <EmbeddedResource Include="Bai6.resx">
+      <DependentUpon>Bai6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai7.resx">
+      <DependentUpon>Bai7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +136,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coVietNam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coUSAjpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coThai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coSing.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

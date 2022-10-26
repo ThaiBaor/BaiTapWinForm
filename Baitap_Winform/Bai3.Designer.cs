@@ -37,10 +37,10 @@ namespace Baitap_Winform
             this.txtB = new System.Windows.Forms.TextBox();
             this.txtR = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnPlus = new System.Windows.Forms.RadioButton();
-            this.rbtnMinus = new System.Windows.Forms.RadioButton();
-            this.rbtnDivide = new System.Windows.Forms.RadioButton();
             this.rbtnMultiple = new System.Windows.Forms.RadioButton();
+            this.rbtnDivide = new System.Windows.Forms.RadioButton();
+            this.rbtnMinus = new System.Windows.Forms.RadioButton();
+            this.rbtnPlus = new System.Windows.Forms.RadioButton();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -110,29 +110,17 @@ namespace Baitap_Winform
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operator";
             // 
-            // rbtnPlus
+            // rbtnMultiple
             // 
-            this.rbtnPlus.AutoSize = true;
-            this.rbtnPlus.Location = new System.Drawing.Point(27, 46);
-            this.rbtnPlus.Name = "rbtnPlus";
-            this.rbtnPlus.Size = new System.Drawing.Size(56, 21);
-            this.rbtnPlus.TabIndex = 0;
-            this.rbtnPlus.TabStop = true;
-            this.rbtnPlus.Text = "Plus";
-            this.rbtnPlus.UseVisualStyleBackColor = true;
-            this.rbtnPlus.CheckedChanged += new System.EventHandler(this.rbtnPlus_CheckedChanged);
-            // 
-            // rbtnMinus
-            // 
-            this.rbtnMinus.AutoSize = true;
-            this.rbtnMinus.Location = new System.Drawing.Point(27, 98);
-            this.rbtnMinus.Name = "rbtnMinus";
-            this.rbtnMinus.Size = new System.Drawing.Size(66, 21);
-            this.rbtnMinus.TabIndex = 0;
-            this.rbtnMinus.TabStop = true;
-            this.rbtnMinus.Text = "Minus";
-            this.rbtnMinus.UseVisualStyleBackColor = true;
-            this.rbtnMinus.CheckedChanged += new System.EventHandler(this.rbtnMinus_CheckedChanged);
+            this.rbtnMultiple.AutoSize = true;
+            this.rbtnMultiple.Location = new System.Drawing.Point(135, 46);
+            this.rbtnMultiple.Name = "rbtnMultiple";
+            this.rbtnMultiple.Size = new System.Drawing.Size(77, 21);
+            this.rbtnMultiple.TabIndex = 0;
+            this.rbtnMultiple.TabStop = true;
+            this.rbtnMultiple.Text = "Multiple";
+            this.rbtnMultiple.UseVisualStyleBackColor = true;
+            this.rbtnMultiple.CheckedChanged += new System.EventHandler(this.rbtnMultiple_CheckedChanged);
             // 
             // rbtnDivide
             // 
@@ -146,17 +134,29 @@ namespace Baitap_Winform
             this.rbtnDivide.UseVisualStyleBackColor = true;
             this.rbtnDivide.CheckedChanged += new System.EventHandler(this.rbtnDivide_CheckedChanged);
             // 
-            // rbtnMultiple
+            // rbtnMinus
             // 
-            this.rbtnMultiple.AutoSize = true;
-            this.rbtnMultiple.Location = new System.Drawing.Point(135, 46);
-            this.rbtnMultiple.Name = "rbtnMultiple";
-            this.rbtnMultiple.Size = new System.Drawing.Size(77, 21);
-            this.rbtnMultiple.TabIndex = 0;
-            this.rbtnMultiple.TabStop = true;
-            this.rbtnMultiple.Text = "Multiple";
-            this.rbtnMultiple.UseVisualStyleBackColor = true;
-            this.rbtnMultiple.CheckedChanged += new System.EventHandler(this.rbtnMultiple_CheckedChanged);
+            this.rbtnMinus.AutoSize = true;
+            this.rbtnMinus.Location = new System.Drawing.Point(27, 98);
+            this.rbtnMinus.Name = "rbtnMinus";
+            this.rbtnMinus.Size = new System.Drawing.Size(66, 21);
+            this.rbtnMinus.TabIndex = 0;
+            this.rbtnMinus.TabStop = true;
+            this.rbtnMinus.Text = "Minus";
+            this.rbtnMinus.UseVisualStyleBackColor = true;
+            this.rbtnMinus.CheckedChanged += new System.EventHandler(this.rbtnMinus_CheckedChanged);
+            // 
+            // rbtnPlus
+            // 
+            this.rbtnPlus.AutoSize = true;
+            this.rbtnPlus.Location = new System.Drawing.Point(27, 46);
+            this.rbtnPlus.Name = "rbtnPlus";
+            this.rbtnPlus.Size = new System.Drawing.Size(56, 21);
+            this.rbtnPlus.TabIndex = 0;
+            this.rbtnPlus.TabStop = true;
+            this.rbtnPlus.Text = "Plus";
+            this.rbtnPlus.UseVisualStyleBackColor = true;
+            this.rbtnPlus.CheckedChanged += new System.EventHandler(this.rbtnPlus_CheckedChanged);
             // 
             // errorProvider
             // 
@@ -176,6 +176,7 @@ namespace Baitap_Winform
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmBai3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bai 3";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBai3_FormClosing);
             this.groupBox1.ResumeLayout(false);

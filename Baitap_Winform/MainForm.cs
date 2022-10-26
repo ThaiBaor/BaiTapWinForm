@@ -44,7 +44,18 @@ namespace Baitap_Winform
         {
             frmBai5 frm = new frmBai5();
             frm.ShowDialog();
-            this.Close();
+        }
+
+        private void mnuBai6_Click(object sender, EventArgs e)
+        {
+            frmBai6 frm = new frmBai6();
+            frm.ShowDialog();
+        }
+
+        private void bài7ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBai7 frm = new frmBai7();
+            frm.ShowDialog();
         }
     }
 }
