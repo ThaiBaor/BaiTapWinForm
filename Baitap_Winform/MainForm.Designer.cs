@@ -37,7 +37,7 @@ namespace Baitap_Winform
             this.mnuBai4 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBai5 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBai6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.bài7ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBai7 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@ namespace Baitap_Winform
             this.mnuBai4,
             this.mnuBai5,
             this.mnuBai6,
-            this.bài7ToolStripMenuItem});
+            this.mnuBai7});
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Size = new System.Drawing.Size(67, 24);
             this.mnuMain.Text = "Phần 1";
@@ -69,51 +69,51 @@ namespace Baitap_Winform
             // mnuBai1
             // 
             this.mnuBai1.Name = "mnuBai1";
-            this.mnuBai1.Size = new System.Drawing.Size(125, 26);
+            this.mnuBai1.Size = new System.Drawing.Size(224, 26);
             this.mnuBai1.Text = "Bài 1";
             this.mnuBai1.Click += new System.EventHandler(this.mnuBai1_Click);
             // 
             // mnuBai2
             // 
             this.mnuBai2.Name = "mnuBai2";
-            this.mnuBai2.Size = new System.Drawing.Size(125, 26);
+            this.mnuBai2.Size = new System.Drawing.Size(224, 26);
             this.mnuBai2.Text = "Bài 2";
             this.mnuBai2.Click += new System.EventHandler(this.mnuBai2_Click);
             // 
             // mnuBai3
             // 
             this.mnuBai3.Name = "mnuBai3";
-            this.mnuBai3.Size = new System.Drawing.Size(125, 26);
+            this.mnuBai3.Size = new System.Drawing.Size(224, 26);
             this.mnuBai3.Text = "Bài 3";
             this.mnuBai3.Click += new System.EventHandler(this.mnuBai3_Click);
             // 
             // mnuBai4
             // 
             this.mnuBai4.Name = "mnuBai4";
-            this.mnuBai4.Size = new System.Drawing.Size(125, 26);
+            this.mnuBai4.Size = new System.Drawing.Size(224, 26);
             this.mnuBai4.Text = "Bài 4";
             this.mnuBai4.Click += new System.EventHandler(this.mnuBai4_Click);
             // 
             // mnuBai5
             // 
             this.mnuBai5.Name = "mnuBai5";
-            this.mnuBai5.Size = new System.Drawing.Size(125, 26);
+            this.mnuBai5.Size = new System.Drawing.Size(224, 26);
             this.mnuBai5.Text = "Bài 5";
             this.mnuBai5.Click += new System.EventHandler(this.mnuBai5_Click);
             // 
             // mnuBai6
             // 
             this.mnuBai6.Name = "mnuBai6";
-            this.mnuBai6.Size = new System.Drawing.Size(125, 26);
+            this.mnuBai6.Size = new System.Drawing.Size(224, 26);
             this.mnuBai6.Text = "Bài 6";
             this.mnuBai6.Click += new System.EventHandler(this.mnuBai6_Click);
             // 
-            // bài7ToolStripMenuItem
+            // mnuBai7
             // 
-            this.bài7ToolStripMenuItem.Name = "bài7ToolStripMenuItem";
-            this.bài7ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.bài7ToolStripMenuItem.Text = "Bài 7";
-            this.bài7ToolStripMenuItem.Click += new System.EventHandler(this.bài7ToolStripMenuItem_Click);
+            this.mnuBai7.Name = "mnuBai7";
+            this.mnuBai7.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai7.Text = "Bài 7";
+            this.mnuBai7.Click += new System.EventHandler(this.mnuBai7_Click);
             // 
             // frmMain
             // 
@@ -143,6 +143,6 @@ namespace Baitap_Winform
         private System.Windows.Forms.ToolStripMenuItem mnuBai4;
         private System.Windows.Forms.ToolStripMenuItem mnuBai5;
         private System.Windows.Forms.ToolStripMenuItem mnuBai6;
-        private System.Windows.Forms.ToolStripMenuItem bài7ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuBai7;
     }
 }

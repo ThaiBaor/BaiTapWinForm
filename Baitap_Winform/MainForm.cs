@@ -52,7 +52,7 @@ namespace Baitap_Winform
             frm.ShowDialog();
         }
 
-        private void bài7ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuBai7_Click(object sender, EventArgs e)
         {
             frmBai7 frm = new frmBai7();
             frm.ShowDialog();
