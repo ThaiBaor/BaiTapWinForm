@@ -30,7 +30,7 @@ namespace Baitap_Winform
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mnuMain = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPhan1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBai1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBai2 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBai3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +39,8 @@ namespace Baitap_Winform
             this.mnuBai6 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBai7 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBai8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPhan2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBai9 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,16 +48,17 @@ namespace Baitap_Winform
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuMain});
+            this.mnuPhan1,
+            this.mnuPhan2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(767, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // mnuMain
+            // mnuPhan1
             // 
-            this.mnuMain.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPhan1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuBai1,
             this.mnuBai2,
             this.mnuBai3,
@@ -64,9 +67,9 @@ namespace Baitap_Winform
             this.mnuBai6,
             this.mnuBai7,
             this.mnuBai8});
-            this.mnuMain.Name = "mnuMain";
-            this.mnuMain.Size = new System.Drawing.Size(67, 24);
-            this.mnuMain.Text = "Phần 1";
+            this.mnuPhan1.Name = "mnuPhan1";
+            this.mnuPhan1.Size = new System.Drawing.Size(67, 24);
+            this.mnuPhan1.Text = "Phần 1";
             // 
             // mnuBai1
             // 
@@ -124,6 +127,21 @@ namespace Baitap_Winform
             this.mnuBai8.Text = "Bài 8";
             this.mnuBai8.Click += new System.EventHandler(this.mnuBai8_Click);
             // 
+            // mnuPhan2
+            // 
+            this.mnuPhan2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuBai9});
+            this.mnuPhan2.Name = "mnuPhan2";
+            this.mnuPhan2.Size = new System.Drawing.Size(67, 24);
+            this.mnuPhan2.Text = "Phần 2";
+            // 
+            // mnuBai9
+            // 
+            this.mnuBai9.Name = "mnuBai9";
+            this.mnuBai9.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai9.Text = "Bài 9";
+            this.mnuBai9.Click += new System.EventHandler(this.mnuBai9_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -145,7 +163,7 @@ namespace Baitap_Winform
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mnuMain;
+        private System.Windows.Forms.ToolStripMenuItem mnuPhan1;
         private System.Windows.Forms.ToolStripMenuItem mnuBai1;
         private System.Windows.Forms.ToolStripMenuItem mnuBai2;
         private System.Windows.Forms.ToolStripMenuItem mnuBai3;
@@ -154,5 +172,7 @@ namespace Baitap_Winform
         private System.Windows.Forms.ToolStripMenuItem mnuBai6;
         private System.Windows.Forms.ToolStripMenuItem mnuBai7;
         private System.Windows.Forms.ToolStripMenuItem mnuBai8;
+        private System.Windows.Forms.ToolStripMenuItem mnuPhan2;
+        private System.Windows.Forms.ToolStripMenuItem mnuBai9;
     }
 }
