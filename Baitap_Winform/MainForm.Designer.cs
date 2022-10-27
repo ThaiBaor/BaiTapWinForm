@@ -74,56 +74,56 @@ namespace Baitap_Winform
             // mnuBai1
             // 
             this.mnuBai1.Name = "mnuBai1";
-            this.mnuBai1.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai1.Size = new System.Drawing.Size(125, 26);
             this.mnuBai1.Text = "Bài 1";
             this.mnuBai1.Click += new System.EventHandler(this.mnuBai1_Click);
             // 
             // mnuBai2
             // 
             this.mnuBai2.Name = "mnuBai2";
-            this.mnuBai2.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai2.Size = new System.Drawing.Size(125, 26);
             this.mnuBai2.Text = "Bài 2";
             this.mnuBai2.Click += new System.EventHandler(this.mnuBai2_Click);
             // 
             // mnuBai3
             // 
             this.mnuBai3.Name = "mnuBai3";
-            this.mnuBai3.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai3.Size = new System.Drawing.Size(125, 26);
             this.mnuBai3.Text = "Bài 3";
             this.mnuBai3.Click += new System.EventHandler(this.mnuBai3_Click);
             // 
             // mnuBai4
             // 
             this.mnuBai4.Name = "mnuBai4";
-            this.mnuBai4.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai4.Size = new System.Drawing.Size(125, 26);
             this.mnuBai4.Text = "Bài 4";
             this.mnuBai4.Click += new System.EventHandler(this.mnuBai4_Click);
             // 
             // mnuBai5
             // 
             this.mnuBai5.Name = "mnuBai5";
-            this.mnuBai5.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai5.Size = new System.Drawing.Size(125, 26);
             this.mnuBai5.Text = "Bài 5";
             this.mnuBai5.Click += new System.EventHandler(this.mnuBai5_Click);
             // 
             // mnuBai6
             // 
             this.mnuBai6.Name = "mnuBai6";
-            this.mnuBai6.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai6.Size = new System.Drawing.Size(125, 26);
             this.mnuBai6.Text = "Bài 6";
             this.mnuBai6.Click += new System.EventHandler(this.mnuBai6_Click);
             // 
             // mnuBai7
             // 
             this.mnuBai7.Name = "mnuBai7";
-            this.mnuBai7.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai7.Size = new System.Drawing.Size(125, 26);
             this.mnuBai7.Text = "Bài 7";
             this.mnuBai7.Click += new System.EventHandler(this.mnuBai7_Click);
             // 
             // mnuBai8
             // 
             this.mnuBai8.Name = "mnuBai8";
-            this.mnuBai8.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai8.Size = new System.Drawing.Size(125, 26);
             this.mnuBai8.Text = "Bài 8";
             this.mnuBai8.Click += new System.EventHandler(this.mnuBai8_Click);
             // 
@@ -153,6 +153,7 @@ namespace Baitap_Winform
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tổng Hợp Bài Tập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

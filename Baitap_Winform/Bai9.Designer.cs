@@ -58,6 +58,10 @@ namespace Baitap_Winform
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.err = new System.Windows.Forms.ErrorProvider(this.components);
+            this.sfd = new System.Windows.Forms.SaveFileDialog();
+            this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnMo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,10 +252,11 @@ namespace Baitap_Winform
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(899, 393);
+            this.btnXoa.Location = new System.Drawing.Point(990, 393);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 35);
             this.btnXoa.TabIndex = 3;
@@ -272,7 +277,7 @@ namespace Baitap_Winform
             this.lstv.HideSelection = false;
             this.lstv.Location = new System.Drawing.Point(371, 23);
             this.lstv.Name = "lstv";
-            this.lstv.Size = new System.Drawing.Size(619, 336);
+            this.lstv.Size = new System.Drawing.Size(710, 336);
             this.lstv.TabIndex = 4;
             this.lstv.UseCompatibleStateImageBehavior = false;
             this.lstv.View = System.Windows.Forms.View.Details;
@@ -280,37 +285,63 @@ namespace Baitap_Winform
             // columnHeader1
             // 
             this.columnHeader1.Text = "Họ tên";
-            this.columnHeader1.Width = 121;
+            this.columnHeader1.Width = 147;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Khu vực";
-            this.columnHeader2.Width = 88;
+            this.columnHeader2.Width = 114;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Định mức";
-            this.columnHeader3.Width = 110;
+            this.columnHeader3.Width = 114;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Tiêu thụ";
-            this.columnHeader4.Width = 91;
+            this.columnHeader4.Width = 113;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Thành tiền";
-            this.columnHeader5.Width = 132;
+            this.columnHeader5.Width = 169;
             // 
             // err
             // 
             this.err.ContainerControl = this;
             // 
+            // ofd
+            // 
+            this.ofd.FileName = "openFileDialog1";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(881, 394);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(88, 35);
+            this.btnLuu.TabIndex = 5;
+            this.btnLuu.Text = "LƯU";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnMo
+            // 
+            this.btnMo.Location = new System.Drawing.Point(772, 394);
+            this.btnMo.Name = "btnMo";
+            this.btnMo.Size = new System.Drawing.Size(88, 35);
+            this.btnMo.TabIndex = 5;
+            this.btnMo.Text = "MỞ";
+            this.btnMo.UseVisualStyleBackColor = true;
+            this.btnMo.Click += new System.EventHandler(this.btnMo_Click);
+            // 
             // frmBai9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1002, 450);
+            this.ClientSize = new System.Drawing.Size(1090, 450);
+            this.Controls.Add(this.btnMo);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.lstv);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThoat);
@@ -337,6 +368,7 @@ namespace Baitap_Winform
             this.Name = "frmBai9";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bai 9";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBai9_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.err)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -373,5 +405,9 @@ namespace Baitap_Winform
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ErrorProvider err;
+        private System.Windows.Forms.Button btnMo;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.SaveFileDialog sfd;
+        private System.Windows.Forms.OpenFileDialog ofd;
     }
 }

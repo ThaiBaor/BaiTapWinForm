@@ -69,5 +69,14 @@ namespace Baitap_Winform
             frmBai9 frm = new frmBai9();
             frm.ShowDialog();
         }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (r == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

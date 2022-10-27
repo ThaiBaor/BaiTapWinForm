@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Baitap_Winform
 {
@@ -85,13 +86,7 @@ namespace Baitap_Winform
                 listViewItem.SubItems.Add(txtTieuThu.Text);
                 listViewItem.SubItems.Add(txtThanhTien.Text);
                 lstv.Items.Add(listViewItem);
-                double tong = 0;
-                for (int i = 0; i < lstv.Items.Count; i++)
-                {
-                    txtTong.Text = lstv.Items[i].SubItems[3].ToString();
-                    tong += double.Parse(lstv.Items[i].SubItems[4].Text.ToString());
-                }
-                txtTong.Text = tong.ToString();
+                tinhtong();
             }
             catch (Exception)
             {
@@ -112,25 +107,110 @@ namespace Baitap_Winform
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            for (int i = lstv.SelectedItems.Count - 1; i >= 0; i--)
+            if (lstv.SelectedItems.Count > 0)
             {
-                if (i == lstv.SelectedItems.Count - 1)
+                DialogResult r = MessageBox.Show("Bạn có muốn xóa không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r == DialogResult.No)
                 {
-                    DialogResult r = MessageBox.Show("Bạn có muốn xóa không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (r == DialogResult.No)
-                    {
-                        return;
-                    }
+                    return;
                 }
-                lstv.Items.Remove(lstv.SelectedItems[i]);
+                for (int i = lstv.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    lstv.Items.Remove(lstv.SelectedItems[i]);
+                }
+                tinhtong();
             }
+            
+        }
+        private void tinhtong()
+        {
             double tong = 0;
             for (int i = 0; i < lstv.Items.Count; i++)
             {
-                txtTong.Text = lstv.Items[i].SubItems[3].ToString();
-                tong += double.Parse(lstv.Items[i].SubItems[4].Text.ToString());
+                txtTong.Text = lstv.Items[i].SubItems[3].Text;
+                tong += double.Parse(lstv.Items[i].SubItems[4].Text);
             }
             txtTong.Text = tong.ToString();
+        }
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sfd.Filter = "Text file (*.txt)|*.txt";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    Stream stream = sfd.OpenFile();
+                    StreamWriter streamWriter = new StreamWriter(stream);
+                    for (int i = 0; i < lstv.Items.Count; ++i)
+                    {
+                        if (i == lstv.Items.Count - 1)
+                        {
+                            streamWriter.Write($"{lstv.Items[i].Text}-{lstv.Items[i].SubItems[1].Text}-{lstv.Items[i].SubItems[2].Text}-{lstv.Items[i].SubItems[3].Text}-{lstv.Items[i].SubItems[4].Text}");
+                        }
+                        else
+                        {
+                            streamWriter.WriteLine($"{lstv.Items[i].Text}-{lstv.Items[i].SubItems[1].Text}-{lstv.Items[i].SubItems[2].Text}-{lstv.Items[i].SubItems[3].Text}-{lstv.Items[i].SubItems[4].Text}");
+                        }
+                    }
+                    streamWriter.Close();
+                    stream.Close();
+                }
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Lưu file thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnMo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ofd.Filter = "Text file (*.txt)|*.txt";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    Stream stream = ofd.OpenFile();
+                    StreamReader streamReader = new StreamReader(stream);
+                    int i = 0;
+                    while (streamReader.Peek() != -1)
+                    {
+                        string[] t = streamReader.ReadLine().Split('-');
+                        lstv.Items.Add(t[0]);
+                        lstv.Items[i].SubItems.Add(t[1]);
+                        lstv.Items[i].SubItems.Add(t[2]);
+                        lstv.Items[i].SubItems.Add(t[3]);
+                        lstv.Items[i].SubItems.Add(t[4]);
+                        ++i;
+                    }
+                    streamReader.Close();
+                    stream.Close();
+                    tinhtong();
+                }
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Mở file thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Mở file thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void frmBai9_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Bạn có muốn thoát không?","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            if (r == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
