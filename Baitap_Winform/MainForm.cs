@@ -57,5 +57,11 @@ namespace Baitap_Winform
             frmBai7 frm = new frmBai7();
             frm.ShowDialog();
         }
+
+        private void mnuBai8_Click(object sender, EventArgs e)
+        {
+            frmBai8 frm = new frmBai8();
+            frm.ShowDialog();
+        }
     }
 }

@@ -38,6 +38,7 @@ namespace Baitap_Winform
             this.mnuBai5 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBai6 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBai7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBai8 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +62,8 @@ namespace Baitap_Winform
             this.mnuBai4,
             this.mnuBai5,
             this.mnuBai6,
-            this.mnuBai7});
+            this.mnuBai7,
+            this.mnuBai8});
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Size = new System.Drawing.Size(67, 24);
             this.mnuMain.Text = "Phần 1";
@@ -115,6 +117,13 @@ namespace Baitap_Winform
             this.mnuBai7.Text = "Bài 7";
             this.mnuBai7.Click += new System.EventHandler(this.mnuBai7_Click);
             // 
+            // mnuBai8
+            // 
+            this.mnuBai8.Name = "mnuBai8";
+            this.mnuBai8.Size = new System.Drawing.Size(224, 26);
+            this.mnuBai8.Text = "Bài 8";
+            this.mnuBai8.Click += new System.EventHandler(this.mnuBai8_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,5 +153,6 @@ namespace Baitap_Winform
         private System.Windows.Forms.ToolStripMenuItem mnuBai5;
         private System.Windows.Forms.ToolStripMenuItem mnuBai6;
         private System.Windows.Forms.ToolStripMenuItem mnuBai7;
+        private System.Windows.Forms.ToolStripMenuItem mnuBai8;
     }
 }
